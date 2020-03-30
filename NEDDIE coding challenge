@@ -19,7 +19,6 @@ function findMatchingTail(arrays) {
    }
    return [tail1+1, tail2+1];
 }
-// test cases arraylist
 var testArrays = [
                     [[ 5, 3, 6, 7, 7, 5, 3],[3, 7, 5, 3]], 
                     [[ 2, 5, 7, 2, 4, 9],[ 4, 2, 7, 2, 8, 9, 9, 4, 9]],
@@ -30,6 +29,6 @@ var testArrays = [
                 ];
 testArrays.forEach(function(arrays){
     var res = findMatchingTail(arrays);
-    document.write(res);
+    document.write("Result: "+res);
     document.write("<br>");
 });
