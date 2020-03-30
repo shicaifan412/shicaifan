@@ -1,4 +1,4 @@
-function sayHello(arrays) {
+function findMatchingTail(arrays) {
     if(!arrays || arrays.length < 2){
         return [-1,-1]
     }
@@ -20,5 +20,5 @@ function sayHello(arrays) {
    return [tail1+1, tail2+1];
 }
 var arrays=[[ 5, 3, 6, 7, 7, 5, 3],[3, 7, 5, 3]];
-var res = sayHello(arrays);
-document.write(res);
+var res = findMatchingTail(arrays);
+print(res);
