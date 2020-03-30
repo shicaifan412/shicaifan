@@ -1,0 +1,24 @@
+function sayHello(arrays) {
+    if(!arrays || arrays.length < 2){
+        return [-1,-1]
+    }
+   var nums1 = arrays[0];
+   var nums2 = arrays[1];
+   var tail1 = nums1.length-1;
+   var tail2 = nums2.length-1;
+   while(tail1 >= 0 && tail2 >= 0){
+       if(nums1[tail1] == nums2[tail2]){
+           tail1--;
+           tail2--;
+       }else{
+           break;
+       }
+   }
+   if(tail1>=nums1.length-1 || tail2>=nums2.length-1){
+       return [-1,-1];
+   }
+   return [tail1+1, tail2+1];
+}
+var arrays=[[ 5, 3, 6, 7, 7, 5, 3],[3, 7, 5, 3]];
+var res = sayHello(arrays);
+document.write(res);
